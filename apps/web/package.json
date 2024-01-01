@@ -4,7 +4,7 @@
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "dev": "concurrently --kill-others \"prisma generate && next dev --port 8888\" \"prisma studio --browser none\"",
-    "build": "prisma generate & next build",
+    "build": "prisma generate && next build && prisma db push",
     "format:write": "prettier --write \"**/*.{css,js,json,jsx,ts,tsx}\"",
     "format": "prettier \"**/*.{css,js,json,jsx,ts,tsx}\"",
     "lint": "next lint",
